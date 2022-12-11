@@ -1,5 +1,6 @@
 package com.nanna.sfgdi;
 
+import com.nanna.sfgdi.controller.I18nController;
 import com.nanna.sfgdi.controller.MyController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,9 +14,12 @@ public class SfgdiApplication {
 		ApplicationContext context = SpringApplication.run ( SfgdiApplication.class , args );
 
 		MyController cntroller = ( MyController ) context.getBean ( "myController" );
+		I18nController i18nController = ( I18nController ) context.getBean ( "i18nController" );
+		System.out.println (i18nController.sayHello ());
 
-		String greeting = cntroller.sayHello ();
-		System.out.println (greeting);
+
+		//		String greeting = cntroller.sayHello ();
+//		System.out.println (greeting);
 	}
 
 
