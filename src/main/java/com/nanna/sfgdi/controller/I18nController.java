@@ -11,6 +11,8 @@ public class I18nController {
     private final GreetingService greetingService;
 
 
+//    Qualifier For the getting the specific bean
+
     public I18nController ( @Qualifier("i18nservice") GreetingService greetingService ) {
         this.greetingService = greetingService;
     }
